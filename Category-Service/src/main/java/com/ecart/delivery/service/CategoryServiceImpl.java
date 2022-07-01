@@ -30,6 +30,7 @@ public class CategoryServiceImpl implements CategoryService {
 			throw new UserInputException();
 		}
 		category = new Category();
+		category.setId(categoryDTO.getId());
 		category.setCategoryName(categoryDTO.getCategoryName());
 		categoryDao.save(category);
 		logger.info("addNewCategory() called");
