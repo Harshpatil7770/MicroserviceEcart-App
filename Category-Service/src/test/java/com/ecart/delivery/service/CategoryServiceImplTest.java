@@ -1,6 +1,7 @@
 package com.ecart.delivery.service;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.when;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -12,6 +13,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import com.ecart.delivery.dao.CategoryDao;
 import com.ecart.delivery.dto.CategoryDTO;
+import com.ecart.delivery.exceptionhandeler.UserInputException;
 import com.ecart.delivery.model.Category;
 
 @ExtendWith(MockitoExtension.class)
@@ -42,5 +44,15 @@ class CategoryServiceImplTest {
 	void addNewCategory() {
 		when(categoryDao.save(category)).thenReturn(category);
 		assertEquals("New Category Added Succesfully", categoryServiceImpl.addNewCategory(categoryDTO));
+	}
+
+	@Test
+	void addNewCategory_throwsexception_if_categoryNameIsNull() {
+		categoryDTO.setCategoryName(null);
+		category.setCategoryName(categoryDTO.getCategoryName());
+		doThrow(UserInputException.class).when(categoryDao).save(category);
+		assertThrows(UserInputException.class, () -> {
+			categoryDao.save(category);
+		});
 	}
 }
