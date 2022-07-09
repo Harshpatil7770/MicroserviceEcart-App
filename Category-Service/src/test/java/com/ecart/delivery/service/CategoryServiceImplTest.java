@@ -1,7 +1,11 @@
 package com.ecart.delivery.service;
 
+<<<<<<< HEAD
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+=======
+import static org.junit.jupiter.api.Assertions.*;
+>>>>>>> refs/remotes/origin/master
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.when;
 
@@ -26,6 +30,7 @@ class CategoryServiceImplTest {
 	@InjectMocks
 	CategoryServiceImpl categoryServiceImpl;
 
+<<<<<<< HEAD
 	private CategoryDTO categoryDTO;
 
 	private Category category;
@@ -35,6 +40,17 @@ class CategoryServiceImplTest {
 		categoryDTO = new CategoryDTO();
 		categoryDTO.setId(101);
 		categoryDTO.setCategoryName("WATCH");
+=======
+	private Category category;
+
+	private CategoryDTO categoryDTO;
+
+	@BeforeEach
+	void setUp() {
+		categoryDTO = new CategoryDTO();
+		categoryDTO.setId(101);
+		categoryDTO.setCategoryName("SMARTWATCH");
+>>>>>>> refs/remotes/origin/master
 
 		category = new Category();
 		category.setId(categoryDTO.getId());
@@ -42,19 +58,31 @@ class CategoryServiceImplTest {
 	}
 
 	@Test
+<<<<<<< HEAD
 	void addNewCategoryDetails() {
+=======
+	void addNewCategory() {
+>>>>>>> refs/remotes/origin/master
 		when(categoryDao.save(category)).thenReturn(category);
 		assertEquals("New Category Added Succesfully", categoryServiceImpl.addNewCategory(categoryDTO));
 	}
 
 	@Test
+<<<<<<< HEAD
 	void addNewCagtegory_thorwsexception_if_caetgoryNameIsBlank() {
 		categoryDTO.setCategoryName(" ");
+=======
+	void addNewCategory_throwsexception_if_categoryNameIsNull() {
+		categoryDTO.setCategoryName(null);
+>>>>>>> refs/remotes/origin/master
 		category.setCategoryName(categoryDTO.getCategoryName());
 		doThrow(UserInputException.class).when(categoryDao).save(category);
 		assertThrows(UserInputException.class, () -> {
 			categoryDao.save(category);
 		});
+<<<<<<< HEAD
 
+=======
+>>>>>>> refs/remotes/origin/master
 	}
 }
