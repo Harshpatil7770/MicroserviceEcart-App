@@ -1,8 +1,12 @@
 package com.ecart.delivery.service;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+=======
+import static org.junit.jupiter.api.Assertions.*;
+>>>>>>> refs/remotes/origin/master
 =======
 import static org.junit.jupiter.api.Assertions.*;
 >>>>>>> refs/remotes/origin/master
@@ -31,6 +35,7 @@ class CategoryServiceImplTest {
 	CategoryServiceImpl categoryServiceImpl;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	private CategoryDTO categoryDTO;
 
 	private Category category;
@@ -41,6 +46,8 @@ class CategoryServiceImplTest {
 		categoryDTO.setId(101);
 		categoryDTO.setCategoryName("WATCH");
 =======
+=======
+>>>>>>> refs/remotes/origin/master
 	private Category category;
 
 	private CategoryDTO categoryDTO;
@@ -50,6 +57,9 @@ class CategoryServiceImplTest {
 		categoryDTO = new CategoryDTO();
 		categoryDTO.setId(101);
 		categoryDTO.setCategoryName("SMARTWATCH");
+<<<<<<< HEAD
+>>>>>>> refs/remotes/origin/master
+=======
 >>>>>>> refs/remotes/origin/master
 
 		category = new Category();
@@ -59,7 +69,11 @@ class CategoryServiceImplTest {
 
 	@Test
 <<<<<<< HEAD
+<<<<<<< HEAD
 	void addNewCategoryDetails() {
+=======
+	void addNewCategory() {
+>>>>>>> refs/remotes/origin/master
 =======
 	void addNewCategory() {
 >>>>>>> refs/remotes/origin/master
@@ -69,8 +83,13 @@ class CategoryServiceImplTest {
 
 	@Test
 <<<<<<< HEAD
+<<<<<<< HEAD
 	void addNewCagtegory_thorwsexception_if_caetgoryNameIsBlank() {
 		categoryDTO.setCategoryName(" ");
+=======
+	void addNewCategory_throwsexception_if_categoryNameIsNull() {
+		categoryDTO.setCategoryName(null);
+>>>>>>> refs/remotes/origin/master
 =======
 	void addNewCategory_throwsexception_if_categoryNameIsNull() {
 		categoryDTO.setCategoryName(null);
@@ -81,7 +100,10 @@ class CategoryServiceImplTest {
 			categoryDao.save(category);
 		});
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> refs/remotes/origin/master
 =======
 >>>>>>> refs/remotes/origin/master
 	}
