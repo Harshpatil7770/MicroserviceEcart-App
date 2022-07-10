@@ -1,0 +1,372 @@
+2022-07-10 00:00:22.326  INFO 47676 --- [http-nio-9090-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-10 00:00:22.357  INFO 47676 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-10 00:00:22.373  INFO 47676 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2022-07-10 00:00:22.398 DEBUG 47676 --- [http-nio-9090-exec-2] org.hibernate.SQL                        : 
+    select
+        category0_.id as id1_0_0_,
+        category0_.category_name as category2_0_0_ 
+    from
+        categories category0_ 
+    where
+        category0_.id=?
+2022-07-10 00:00:22.402 TRACE 47676 --- [http-nio-9090-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [1]
+2022-07-10 00:00:22.517  INFO 47676 --- [http-nio-9090-exec-2] c.e.d.service.CategoryServiceImpl        : fetchById() called
+2022-07-10 00:01:48.309  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 00:02:59.678 DEBUG 47676 --- [http-nio-9090-exec-4] org.hibernate.SQL                        : 
+    select
+        category0_.id as id1_0_0_,
+        category0_.category_name as category2_0_0_ 
+    from
+        categories category0_ 
+    where
+        category0_.id=?
+2022-07-10 00:02:59.680 TRACE 47676 --- [http-nio-9090-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [1]
+2022-07-10 00:02:59.685  INFO 47676 --- [http-nio-9090-exec-4] c.e.d.service.CategoryServiceImpl        : fetchById() called
+2022-07-10 00:04:29.087  INFO 47676 --- [Thread-15] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application CATEGORY-SERVICE with eureka with status DOWN
+2022-07-10 00:04:29.088  INFO 47676 --- [Thread-15] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1657391669088, current=DOWN, previous=UP]
+2022-07-10 00:04:29.090  INFO 47676 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CATEGORY-SERVICE/Harshawardhan-PA.India.XoriantCorp.com:category-service:9090: registering service...
+2022-07-10 00:04:29.096  INFO 47676 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CATEGORY-SERVICE/Harshawardhan-PA.India.XoriantCorp.com:category-service:9090 - registration status: 204
+2022-07-10 00:04:29.204  INFO 47676 --- [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-10 00:04:29.209  INFO 47676 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2022-07-10 00:04:29.223  INFO 47676 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2022-07-10 00:04:29.225  INFO 47676 --- [Thread-15] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-07-10 00:04:32.256  INFO 47676 --- [Thread-15] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-07-10 00:04:32.262  INFO 47676 --- [Thread-15] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CATEGORY-SERVICE/Harshawardhan-PA.India.XoriantCorp.com:category-service:9090 - deregister  status: 200
+2022-07-10 00:04:32.414  INFO 47676 --- [Thread-15] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-07-10 00:04:34.193  INFO 47676 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2022-07-10 00:04:34.229  WARN 47676 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: None of labels [] found
+2022-07-10 00:04:34.231  INFO 47676 --- [restartedMain] c.e.delivery.CategoryServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2022-07-10 00:04:35.439  INFO 47676 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-10 00:04:35.471  INFO 47676 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 1 JPA repository interfaces.
+2022-07-10 00:04:35.638  INFO 47676 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=5d91b750-e5cb-36d0-a98e-8ecd049dc791
+2022-07-10 00:04:35.805  INFO 47676 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2022-07-10 00:04:35.806  INFO 47676 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-10 00:04:35.806  INFO 47676 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-10 00:04:35.894  INFO 47676 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-10 00:04:35.894  INFO 47676 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1654 ms
+2022-07-10 00:04:36.046  INFO 47676 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-10 00:04:36.059  INFO 47676 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2022-07-10 00:04:36.096  INFO 47676 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2022-07-10 00:04:36.097  INFO 47676 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-07-10 00:04:36.193  INFO 47676 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-10 00:04:36.194  INFO 47676 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-10 00:04:36.460  WARN 47676 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-10 00:04:39.198  WARN 47676 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-07-10 00:04:39.795  INFO 47676 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-07-10 00:04:39.879  WARN 47676 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-07-10 00:04:39.890  INFO 47676 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2022-07-10 00:04:39.998  INFO 47676 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-07-10 00:04:40.043  INFO 47676 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-07-10 00:04:40.043  INFO 47676 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 00:04:40.057  INFO 47676 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-07-10 00:04:40.057  INFO 47676 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-07-10 00:04:40.058  INFO 47676 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-07-10 00:04:40.058  INFO 47676 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-07-10 00:04:40.058  INFO 47676 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-07-10 00:04:40.059  INFO 47676 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-07-10 00:04:40.059  INFO 47676 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-07-10 00:04:40.082  INFO 47676 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-07-10 00:04:40.088  INFO 47676 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-07-10 00:04:40.094  INFO 47676 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-07-10 00:04:40.112  INFO 47676 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1657391680112 with initial instances count: 4
+2022-07-10 00:04:40.114  INFO 47676 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application CATEGORY-SERVICE with eureka with status UP
+2022-07-10 00:04:40.115  INFO 47676 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1657391680115, current=UP, previous=STARTING]
+2022-07-10 00:04:40.115  INFO 47676 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CATEGORY-SERVICE/Harshawardhan-PA.India.XoriantCorp.com:category-service:9090: registering service...
+2022-07-10 00:04:40.128  INFO 47676 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2022-07-10 00:04:40.129  INFO 47676 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9090
+2022-07-10 00:04:40.136  INFO 47676 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CATEGORY-SERVICE/Harshawardhan-PA.India.XoriantCorp.com:category-service:9090 - registration status: 204
+2022-07-10 00:04:40.743  INFO 47676 --- [restartedMain] c.e.delivery.CategoryServiceApplication  : Started CategoryServiceApplication in 8.196 seconds (JVM running for 6242.91)
+2022-07-10 00:04:40.748  INFO 47676 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-07-10 00:04:45.886  INFO 47676 --- [Thread-22] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application CATEGORY-SERVICE with eureka with status DOWN
+2022-07-10 00:04:45.887  INFO 47676 --- [Thread-22] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1657391685887, current=DOWN, previous=UP]
+2022-07-10 00:04:45.888  INFO 47676 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CATEGORY-SERVICE/Harshawardhan-PA.India.XoriantCorp.com:category-service:9090: registering service...
+2022-07-10 00:04:45.897  INFO 47676 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CATEGORY-SERVICE/Harshawardhan-PA.India.XoriantCorp.com:category-service:9090 - registration status: 204
+2022-07-10 00:04:45.990  INFO 47676 --- [Thread-22] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-10 00:04:45.994  INFO 47676 --- [Thread-22] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2022-07-10 00:04:46.006  INFO 47676 --- [Thread-22] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2022-07-10 00:04:46.008  INFO 47676 --- [Thread-22] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-07-10 00:04:49.048  INFO 47676 --- [Thread-22] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-07-10 00:04:49.054  INFO 47676 --- [Thread-22] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CATEGORY-SERVICE/Harshawardhan-PA.India.XoriantCorp.com:category-service:9090 - deregister  status: 200
+2022-07-10 00:04:49.236  INFO 47676 --- [Thread-22] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-07-10 00:04:51.035  INFO 47676 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2022-07-10 00:04:51.047  WARN 47676 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: None of labels [] found
+2022-07-10 00:04:51.049  INFO 47676 --- [restartedMain] c.e.delivery.CategoryServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2022-07-10 00:04:51.801  INFO 47676 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-10 00:04:51.854  INFO 47676 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 1 JPA repository interfaces.
+2022-07-10 00:04:52.171  INFO 47676 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=5d91b750-e5cb-36d0-a98e-8ecd049dc791
+2022-07-10 00:04:52.459  INFO 47676 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2022-07-10 00:04:52.461  INFO 47676 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-10 00:04:52.462  INFO 47676 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-10 00:04:52.630  INFO 47676 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-10 00:04:52.630  INFO 47676 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1576 ms
+2022-07-10 00:04:52.920  INFO 47676 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-10 00:04:52.948  INFO 47676 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2022-07-10 00:04:52.981  INFO 47676 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2022-07-10 00:04:52.982  INFO 47676 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-07-10 00:04:53.114  INFO 47676 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-10 00:04:53.115  INFO 47676 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-10 00:04:53.516  WARN 47676 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-10 00:04:56.638  WARN 47676 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-07-10 00:04:57.462  INFO 47676 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-07-10 00:04:57.508  WARN 47676 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-07-10 00:04:57.514  INFO 47676 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2022-07-10 00:04:57.574  INFO 47676 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-07-10 00:04:57.601  INFO 47676 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-07-10 00:04:57.601  INFO 47676 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 00:04:57.615  INFO 47676 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-07-10 00:04:57.615  INFO 47676 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-07-10 00:04:57.615  INFO 47676 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-07-10 00:04:57.615  INFO 47676 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-07-10 00:04:57.615  INFO 47676 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-07-10 00:04:57.615  INFO 47676 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-07-10 00:04:57.615  INFO 47676 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-07-10 00:04:57.633  INFO 47676 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-07-10 00:04:57.640  INFO 47676 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-07-10 00:04:57.647  INFO 47676 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-07-10 00:04:57.663  INFO 47676 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1657391697663 with initial instances count: 4
+2022-07-10 00:04:57.666  INFO 47676 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application CATEGORY-SERVICE with eureka with status UP
+2022-07-10 00:04:57.667  INFO 47676 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1657391697667, current=UP, previous=STARTING]
+2022-07-10 00:04:57.667  INFO 47676 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CATEGORY-SERVICE/Harshawardhan-PA.India.XoriantCorp.com:category-service:9090: registering service...
+2022-07-10 00:04:57.679  INFO 47676 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2022-07-10 00:04:57.679  INFO 47676 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9090
+2022-07-10 00:04:57.684  INFO 47676 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CATEGORY-SERVICE/Harshawardhan-PA.India.XoriantCorp.com:category-service:9090 - registration status: 204
+2022-07-10 00:04:58.262  INFO 47676 --- [restartedMain] c.e.delivery.CategoryServiceApplication  : Started CategoryServiceApplication in 8.889 seconds (JVM running for 6260.428)
+2022-07-10 00:04:58.267  INFO 47676 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-07-10 00:05:51.865  INFO 47676 --- [http-nio-9090-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-10 00:05:51.865  INFO 47676 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-10 00:05:51.869  INFO 47676 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-07-10 00:05:51.879 DEBUG 47676 --- [http-nio-9090-exec-2] org.hibernate.SQL                        : 
+    select
+        category0_.id as id1_0_0_,
+        category0_.category_name as category2_0_0_ 
+    from
+        categories category0_ 
+    where
+        category0_.id=?
+2022-07-10 00:05:51.880 TRACE 47676 --- [http-nio-9090-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [1]
+2022-07-10 00:05:51.935  INFO 47676 --- [http-nio-9090-exec-2] c.e.d.service.CategoryServiceImpl        : fetchById() called
+2022-07-10 00:09:57.636  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 00:10:18.562 DEBUG 47676 --- [http-nio-9090-exec-4] org.hibernate.SQL                        : 
+    select
+        category0_.id as id1_0_0_,
+        category0_.category_name as category2_0_0_ 
+    from
+        categories category0_ 
+    where
+        category0_.id=?
+2022-07-10 00:10:18.563 TRACE 47676 --- [http-nio-9090-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [1]
+2022-07-10 00:10:18.567  INFO 47676 --- [http-nio-9090-exec-4] c.e.d.service.CategoryServiceImpl        : fetchById() called
+2022-07-10 03:12:21.484  WARN 47676 --- [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=3h1m58s345ms338µs).
+2022-07-10 06:59:10.719  WARN 47676 --- [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=3h45m20s103ms982µs).
+2022-07-10 07:00:36.570 DEBUG 47676 --- [http-nio-9090-exec-6] org.hibernate.SQL                        : 
+    select
+        category0_.id as id1_0_0_,
+        category0_.category_name as category2_0_0_ 
+    from
+        categories category0_ 
+    where
+        category0_.id=?
+2022-07-10 07:00:36.570 TRACE 47676 --- [http-nio-9090-exec-6] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [1]
+2022-07-10 07:00:37.098  INFO 47676 --- [http-nio-9090-exec-6] c.e.d.service.CategoryServiceImpl        : fetchById() called
+2022-07-10 07:00:45.168  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 07:03:17.722 DEBUG 47676 --- [http-nio-9090-exec-8] org.hibernate.SQL                        : 
+    select
+        category0_.id as id1_0_0_,
+        category0_.category_name as category2_0_0_ 
+    from
+        categories category0_ 
+    where
+        category0_.id=?
+2022-07-10 07:03:17.723 TRACE 47676 --- [http-nio-9090-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [1]
+2022-07-10 07:03:17.725  INFO 47676 --- [http-nio-9090-exec-8] c.e.d.service.CategoryServiceImpl        : fetchById() called
+2022-07-10 07:05:45.181  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 07:10:45.184  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 07:12:34.199 DEBUG 47676 --- [http-nio-9090-exec-10] org.hibernate.SQL                        : 
+    select
+        category0_.id as id1_0_0_,
+        category0_.category_name as category2_0_0_ 
+    from
+        categories category0_ 
+    where
+        category0_.id=?
+2022-07-10 07:12:34.199 TRACE 47676 --- [http-nio-9090-exec-10] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [1]
+2022-07-10 07:12:34.201  INFO 47676 --- [http-nio-9090-exec-10] c.e.d.service.CategoryServiceImpl        : fetchById() called
+2022-07-10 07:15:45.185  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 07:18:57.596 DEBUG 47676 --- [http-nio-9090-exec-2] org.hibernate.SQL                        : 
+    select
+        category0_.id as id1_0_0_,
+        category0_.category_name as category2_0_0_ 
+    from
+        categories category0_ 
+    where
+        category0_.id=?
+2022-07-10 07:18:57.596 TRACE 47676 --- [http-nio-9090-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [1]
+2022-07-10 07:18:57.598  INFO 47676 --- [http-nio-9090-exec-2] c.e.d.service.CategoryServiceImpl        : fetchById() called
+2022-07-10 07:20:45.198  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 07:25:45.210  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 07:30:45.220  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 07:35:45.234  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 07:40:45.237  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 07:45:45.241  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 07:50:45.249  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 07:55:45.258  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 08:00:45.269  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 08:05:45.279  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 08:10:45.289  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 08:15:45.302  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 08:20:45.311  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 08:25:45.322  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 08:30:45.327  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 08:35:45.342  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 08:40:45.355  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 08:44:27.770 DEBUG 47676 --- [http-nio-9090-exec-4] org.hibernate.SQL                        : 
+    select
+        category0_.id as id1_0_0_,
+        category0_.category_name as category2_0_0_ 
+    from
+        categories category0_ 
+    where
+        category0_.id=?
+2022-07-10 08:44:27.771 TRACE 47676 --- [http-nio-9090-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [1]
+2022-07-10 08:44:27.813  INFO 47676 --- [http-nio-9090-exec-4] c.e.d.service.CategoryServiceImpl        : fetchById() called
+2022-07-10 08:45:45.358  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 08:48:34.689 DEBUG 47676 --- [http-nio-9090-exec-6] org.hibernate.SQL                        : 
+    select
+        category0_.id as id1_0_0_,
+        category0_.category_name as category2_0_0_ 
+    from
+        categories category0_ 
+    where
+        category0_.id=?
+2022-07-10 08:48:34.690 TRACE 47676 --- [http-nio-9090-exec-6] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [1]
+2022-07-10 08:48:34.692  INFO 47676 --- [http-nio-9090-exec-6] c.e.d.service.CategoryServiceImpl        : fetchById() called
+2022-07-10 08:50:45.363  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 08:54:30.201 DEBUG 47676 --- [http-nio-9090-exec-8] org.hibernate.SQL                        : 
+    select
+        category0_.id as id1_0_0_,
+        category0_.category_name as category2_0_0_ 
+    from
+        categories category0_ 
+    where
+        category0_.id=?
+2022-07-10 08:54:30.201 TRACE 47676 --- [http-nio-9090-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [1]
+2022-07-10 08:54:30.286  INFO 47676 --- [http-nio-9090-exec-8] c.e.d.service.CategoryServiceImpl        : fetchById() called
+2022-07-10 08:55:45.376  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 09:00:45.390  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 09:05:36.457 DEBUG 47676 --- [http-nio-9090-exec-10] org.hibernate.SQL                        : 
+    select
+        category0_.id as id1_0_0_,
+        category0_.category_name as category2_0_0_ 
+    from
+        categories category0_ 
+    where
+        category0_.id=?
+2022-07-10 09:05:36.458 TRACE 47676 --- [http-nio-9090-exec-10] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [1]
+2022-07-10 09:05:36.532  INFO 47676 --- [http-nio-9090-exec-10] c.e.d.service.CategoryServiceImpl        : fetchById() called
+2022-07-10 09:05:45.393  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 09:16:50.114  WARN 47676 --- [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=8m7s562ms789µs100ns).
+2022-07-10 09:18:22.935  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 09:23:22.936  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 09:28:22.942  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 09:33:22.957  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 09:38:22.963  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 09:43:22.966  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 09:48:22.973  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 09:53:22.976  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 09:58:22.981  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 10:03:22.997  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 10:03:49.588 DEBUG 47676 --- [http-nio-9090-exec-2] org.hibernate.SQL                        : 
+    select
+        category0_.id as id1_0_0_,
+        category0_.category_name as category2_0_0_ 
+    from
+        categories category0_ 
+    where
+        category0_.id=?
+2022-07-10 10:03:49.589 TRACE 47676 --- [http-nio-9090-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [1]
+2022-07-10 10:03:49.602  INFO 47676 --- [http-nio-9090-exec-2] c.e.d.service.CategoryServiceImpl        : fetchById() called
+2022-07-10 10:08:22.999  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 10:13:23.000  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 10:18:23.015  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 10:23:23.027  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 10:28:23.031  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 10:33:23.043  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 10:38:23.048  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 10:43:23.052  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 10:48:23.056  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 10:53:23.063  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 10:58:23.075  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 11:03:23.080  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 11:08:23.090  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 11:25:12.973  WARN 47676 --- [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=13m21s123ms285µs200ns).
+2022-07-10 11:26:14.201  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 11:31:14.209  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 11:36:14.223  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 11:41:14.225  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 11:46:14.229  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 11:51:14.246  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 11:56:14.256  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 12:01:14.268  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 12:06:14.274  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 12:11:14.283  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 12:16:14.284  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 12:21:19.148  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 12:26:19.165  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 12:31:19.182  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 12:36:19.192  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 12:41:19.208  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 12:46:19.224  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 12:51:19.232  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 12:56:19.242  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 13:01:19.250  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 13:06:19.265  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 13:11:19.270  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 13:16:19.274  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 13:21:19.281  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 13:26:19.291  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 13:31:19.303  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 13:36:19.314  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 13:41:19.325  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 13:46:19.336  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 13:51:19.338  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 13:56:19.353  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 14:01:19.362  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 14:15:59.928  WARN 47676 --- [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=13m39s694ms202µs800ns).
+2022-07-10 14:19:29.056  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 14:24:29.063  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 14:29:29.065  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 14:34:29.141  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 14:39:29.156  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 14:44:29.170  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 14:49:29.184  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 14:54:29.197  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 14:59:29.200  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 15:04:29.201  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 15:09:29.214  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 15:14:29.221  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 15:19:29.232  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 15:24:29.249  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 15:29:29.262  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 15:34:29.273  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 15:39:29.285  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 15:44:29.302  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 15:49:29.316  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 15:54:29.319  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 15:59:29.325  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 16:04:29.341  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 16:09:29.345  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 16:14:29.352  INFO 47676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-07-10 16:17:05.713  INFO 47676 --- [RMI TCP Connection(731)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-07-10 16:17:05.809  INFO 47676 --- [RMI TCP Connection(732)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-07-10 16:17:05.855  INFO 47676 --- [RMI TCP Connection(731)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application CATEGORY-SERVICE with eureka with status DOWN
+2022-07-10 16:17:05.856  INFO 47676 --- [RMI TCP Connection(731)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1657450025856, current=DOWN, previous=UP]
+2022-07-10 16:17:05.891  INFO 47676 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CATEGORY-SERVICE/Harshawardhan-PA.India.XoriantCorp.com:category-service:9090: registering service...
+2022-07-10 16:17:05.993  INFO 47676 --- [RMI TCP Connection(733)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-07-10 16:17:06.082  INFO 47676 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CATEGORY-SERVICE/Harshawardhan-PA.India.XoriantCorp.com:category-service:9090 - registration status: 204
+2022-07-10 16:17:06.218  INFO 47676 --- [RMI TCP Connection(734)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-07-10 16:17:06.246  INFO 47676 --- [RMI TCP Connection(731)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-07-10 16:17:06.294  INFO 47676 --- [RMI TCP Connection(731)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-07-10 16:17:06.363  INFO 47676 --- [RMI TCP Connection(735)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-07-10 16:17:06.537  INFO 47676 --- [RMI TCP Connection(736)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-07-10 16:17:06.735  INFO 47676 --- [RMI TCP Connection(737)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-07-10 16:17:06.807  INFO 47676 --- [RMI TCP Connection(731)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
