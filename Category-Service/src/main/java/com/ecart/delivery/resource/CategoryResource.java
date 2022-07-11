@@ -21,6 +21,8 @@ import com.ecart.delivery.service.CategoryServiceImpl;
 @RequestMapping("/api/categories")
 public class CategoryResource {
 
+	private static final String SAVE_OR_UPDATE_LISTS_CATEGORIES = "save or update lists of categories succesfully!";
+
 	@Autowired
 	private CategoryServiceImpl categoryServiceImpl;
 
@@ -55,10 +57,10 @@ public class CategoryResource {
 	}
 
 	@PostMapping("/saveOrUpdateAll")
-	public String addOrUpdateNewListsofCategories(@RequestBody List<Category> catLists) {
-		String result = categoryServiceImpl.addOrUpdateNewListsofCategories(catLists);
+	public List<Category> addOrUpdateNewListsofCategories(@RequestBody List<Category> catLists) {
+		List<Category> result = categoryServiceImpl.addOrUpdateNewListsofCategories(catLists);
 		if (result != null) {
-			messageSender.addNewOrUpdateListsOfCategory(result);
+			messageSender.addNewOrUpdateListsOfCategory(SAVE_OR_UPDATE_LISTS_CATEGORIES);
 		}
 		return result;
 	}

@@ -20,4 +20,13 @@ public class MessageSender {
 	public void saveOrUpdateProduct(String msg) {
 		rabbitTemplate.convertAndSend("saveOrUpdateProductQ", msg);
 	}
+
+	@Bean
+	public Queue saveOrUpdateListOfProduct() {
+		return new Queue("saveOrUpdateListOfProductQ", false);
+	}
+
+	public void saveOrUpdateListOfProduct(String addOrUpdateProductLists) {
+		rabbitTemplate.convertAndSend("saveOrUpdateListOfProductQ", addOrUpdateProductLists);
+	}
 }

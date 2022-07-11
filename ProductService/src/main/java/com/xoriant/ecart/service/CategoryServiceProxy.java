@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.xoriant.ecart.dto.Category;
 
-@FeignClient(name = "category-service")
+@FeignClient(name = "http://localhost:9090")
 public interface CategoryServiceProxy {
 
 	@GetMapping("/api/categories/find-category")

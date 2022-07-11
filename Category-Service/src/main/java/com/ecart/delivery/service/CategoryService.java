@@ -14,7 +14,7 @@ public interface CategoryService {
 
 	String addNewListsofCategories(List<Category> catLists);
 
-	String addOrUpdateNewListsofCategories(List<Category> catLists);
+	 List<Category> addOrUpdateNewListsofCategories(List<Category> catLists);
 
 	List<Category> fetchAll();
 

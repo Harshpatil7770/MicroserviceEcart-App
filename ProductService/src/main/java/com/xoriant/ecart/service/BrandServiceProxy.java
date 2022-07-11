@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.xoriant.ecart.dto.Brand;
 
-@FeignClient(name = "brand-service")
+@FeignClient(name = "http://localhost:9091")
 public interface BrandServiceProxy {
 
 	@GetMapping("/api/brands/fetch-brand")

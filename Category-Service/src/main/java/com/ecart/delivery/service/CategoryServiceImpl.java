@@ -24,6 +24,12 @@ public class CategoryServiceImpl implements CategoryService {
 
 	private static final Logger logger = Logger.getLogger(CategoryServiceImpl.class.getName());
 
+	private static final String ADDED_NEW_CATEGORY = "New Category Added Succesfully!";
+
+	private static final String UPDATED_EXISTING_CATEGORY = "Category Updated Succesfully!";
+
+	private static final String NEW_CATEGORY_LISTS_ADDED = "New Lists of Categories added Sucesfully!";
+
 	@Override
 	public String addNewCategory(CategoryDTO categoryDTO) {
 		if (categoryDTO.getCategoryName().isEmpty() || categoryDTO.getCategoryName().isBlank()) {
@@ -34,7 +40,7 @@ public class CategoryServiceImpl implements CategoryService {
 		category.setCategoryName(categoryDTO.getCategoryName());
 		categoryDao.save(category);
 		logger.info("addNewCategory() called");
-		return "New Category Added Succesfully";
+		return ADDED_NEW_CATEGORY;
 	}
 
 	// required to use saveorupate method of jpa
@@ -44,18 +50,19 @@ public class CategoryServiceImpl implements CategoryService {
 			throw new UserInputException();
 		}
 		Optional<Category> existingCategory = categoryDao.findById(categoryDTO.getId());
-		if (!existingCategory.isPresent()) {
+		if (existingCategory.isPresent()) {
 			category = new Category();
+			category.setId(categoryDTO.getId());
 			category.setCategoryName(categoryDTO.getCategoryName());
 			categoryDao.save(category);
+			return UPDATED_EXISTING_CATEGORY;
 		} else {
 			category = new Category();
 			category.setId(categoryDTO.getId());
 			category.setCategoryName(categoryDTO.getCategoryName());
 			categoryDao.save(category);
+			return ADDED_NEW_CATEGORY;
 		}
-		logger.info("addOrUpdateCategory() called");
-		return "Add Or Update Category !";
 	}
 
 	@Override
@@ -67,11 +74,11 @@ public class CategoryServiceImpl implements CategoryService {
 		}
 		categoryDao.saveAll(catLists);
 		logger.info("addNewListsofCategories() called");
-		return "New Category Lists Added !";
+		return NEW_CATEGORY_LISTS_ADDED;
 	}
 
 	@Override
-	public String addOrUpdateNewListsofCategories(List<Category> catLists) {
+	public List<Category> addOrUpdateNewListsofCategories(List<Category> catLists) {
 		List<Category> addOrUpdateCatsLists = new ArrayList<Category>();
 		for (Category eachCatLists : catLists) {
 			if (eachCatLists.getCategoryName().isEmpty() || eachCatLists.getCategoryName().isBlank()) {
@@ -94,7 +101,7 @@ public class CategoryServiceImpl implements CategoryService {
 			categoryDao.saveAll(addOrUpdateCatsLists);
 		}
 		logger.info("addOrUpdateNewListsofCategories() called");
-		return "add or update Lists of categories !";
+		return addOrUpdateCatsLists;
 	}
 
 	@Override
